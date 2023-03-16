@@ -22,12 +22,15 @@
             display: flex;
             justify-content: space-around;
             background-color: #333;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             padding: 1em;
+            flex-grow: 1;
+            text-align: center;
         }
 
         nav a:hover {
@@ -44,6 +47,13 @@
             text-align: center;
             padding: 1em;
             margin-top: 2em;
+        }
+
+        /* Responsive design for mobile devices */
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
         }
     </style>
     <script>
