@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Developer Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1em;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+
+        main {
+            padding: 2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-top: 2em;
+        }
+    </style>
+    <script>
+        function loadContent(contentId) {
+            const content = {
+                'about': 'I am an IoT developer with expertise in various IoT platforms and programming languages. I have successfully completed projects in home automation, smart cities, and industrial IoT.',
+                'projects': '1. Smart Home Automation System\n2. IoT-based Air Quality Monitoring System\n3. Industrial IoT for Predictive Maintenance\n4. Smart Parking System',
+                'contact': 'Email: iotdeveloper@example.com\nPhone: +1 (123) 456-7890\nLinkedIn: https://www.linkedin.com/in/iotdeveloper/',
+            };
+
+            document.getElementById('content').innerText = content[contentId] || '';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>IoT Developer Portfolio</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="loadContent('about')">About</a>
+        <a href="#" onclick="loadContent('projects')">Projects</a>
+        <a href="#" onclick="loadContent('contact')">Contact</a>
+    </nav>
+    <main>
+        <pre id="content"></pre>
+    </main>
+    <footer>
+        &copy; IoT Developer - All rights reserved.
+    </footer>
+</body>
+</html>
