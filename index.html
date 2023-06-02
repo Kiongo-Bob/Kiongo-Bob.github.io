@@ -11,7 +11,7 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="imgs/logo.png" class="logo">
+            <img src="Logo_Black.png" class="logo">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -31,19 +31,67 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="imgs/user.jpg">
+                <img src="imgs/Logo_Black.png">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p> I'm a self driven and ambitious young man with a passion for IoT, AI and ML.</p>
+
                 <div class="tab-titles">
-                    <p class="tab-links">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>IoT</span><br>Createing IoT solutions to maximise on efficiency.</li>
+                        <li><span>Embedded Systems</span><br>Solving Kenyan problems through embedded systems.</li>
+                        <li><span>AI & ML</span><br>Embedded Machine Learning on edge devices to achieve AIoT.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Jan. 2023 - Present</span><br>Freelancing & Learning by building</li>
+
+
+
+                        <li><span>Sept. 2022 - Nov. 2022</span><br>IT Support Intern</li>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Feb. 2023 - May 2023</span><br>DSE LUX Data Science Bootcamp.</li>
+                        <li><span>Sept. 2018 - Dec. 2022</span><br>B.Sc.  Applied Physics and Computer Science<br>Multimedia University of Kenya.</li>
+                        <li><span>Feb. 2014 - Nov. 2017</span><br>High School.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!--________________Services_______________-->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 </body>
 </html>
