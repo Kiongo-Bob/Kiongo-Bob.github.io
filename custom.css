@@ -11,7 +11,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url('imgs/Me1.jpg');
+    background-image: url('imgs/Me2.jpg');
     background-size: cover;
     background-position: centre;
 }
@@ -136,6 +136,22 @@ nav ul li a:hover::after{
 }
 .tab-contents.active-tab{
     display: block;
+}
+.btn{
+    display: flex;
+    font-weight: 100;
+    gap: 2rem;
+    width: 10rem;
+}
+.download-btn{
+    border-radius: .4rem;
+    font-size: 30px;
+    padding: .5rem;
+}
+.contact-btn{
+    border-radius: .4rem;
+    font-size: 30px;
+    padding: .5rem;
 }
 
 /*_________Services________________*/
