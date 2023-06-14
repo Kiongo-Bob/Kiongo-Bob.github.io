@@ -69,12 +69,17 @@
                 <br>
                 <br>
                 <div class="btn">
-                    <a href="https://github.com/Kiongo-Bob/Kiongo-Bob.github.io/blob/main/imgs/Cirriculum%20Vitae.pdf" download>
-                        <button>Download CV</button>
-                    </a>
-                      
                      <button class="download-btn"
-                        onclick="window.open('')">CV</button>
+                        onclick="openCV()">Open CV</button>
+                        <script>
+                        function openCV() {
+                            // Get the URL of the CV file
+                            var cvURL = "https://github.com/Kiongo-Bob/Kiongo-Bob.github.io/blob/main/imgs/Cirriculum%20Vitae.pdf";
+                            
+                            // Open the CV file in a new tab/window
+                            window.open(cvURL, "_blank");
+                          }
+                        </script>
                     <button class="contact-btn"
                         onclick="location.href='mailto:kiongobob@gmail.com'">Email</button>
                 </div>
